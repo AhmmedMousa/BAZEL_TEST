@@ -1,12 +1,12 @@
 # ####### Your code starts here #######
 	
-# define the package visibility as public to be able to use it in external repo
+
 package(default_visibility = ["//visibility:public"])
 
-# load the string_build_setting target from def.bzl
+
 load("//:def.bzl", "string_build_setting")
 
-# #######  Your code ends here  #######
+
 
 string_build_setting(
     name = "stringJob",
@@ -25,9 +25,7 @@ cc_library(
 	includes = ["inc/"],
 )
 
-# ####### Your code starts here #######
-	
-# define two config setting based on the select attr above and provide value for actor-name as "actor" and for hero-name as "hero"
+
 
 config_setting(
 	name = "actor-name",
@@ -39,5 +37,3 @@ config_setting(
 	flag_values  = { ":stringJob" : "hero" },
 )
 
-
-# #######  Your code ends here  #######
