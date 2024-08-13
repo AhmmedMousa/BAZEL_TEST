@@ -29,19 +29,15 @@ cc_library(
 	
 # define two config setting based on the select attr above and provide value for actor-name as "actor" and for hero-name as "hero"
 
-config_setting {
-name = "actor-name" ,
-constraint_value = {":actor"},
-}
+config_setting(
+	name = "actor-name",
+	flag_values  = { ":stringJob" : "actor" },
+)
 
-config_setting {
-name = "hero-name" ,
-constraint_value = {":hero"},
-}
-
-constraint_setting(name = "type")
-constraint_value(name = "actor",constraint_setting = "type")
-constraint_value(name = "hero",constraint_setting = "type")
+config_setting(
+	name = "hero-name",
+	flag_values  = { ":stringJob" : "hero" },
+)
 
 
 # #######  Your code ends here  #######
