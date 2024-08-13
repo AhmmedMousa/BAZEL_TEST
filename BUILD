@@ -1,7 +1,7 @@
 # ####### Your code starts here #######
 	
 # define the package visibility as public to be able to use it in external repo
-visibility("public")
+package(default_visibility = ["//visibility:public"])
 
 # load the string_build_setting target from def.bzl
 load("//Bazel_Exercise/Bazel_stringLib/def.bzl")
