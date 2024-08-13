@@ -4,7 +4,7 @@
 package(default_visibility = ["//visibility:public"])
 
 # load the string_build_setting target from def.bzl
-load("//Bazel_Exercise/Bazel_stringLib/def.bzl")
+load("//:def.bzl", "string_build_setting")
 
 # #######  Your code ends here  #######
 
